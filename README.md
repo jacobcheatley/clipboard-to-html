@@ -41,11 +41,11 @@ GNOME shortcuts (Settings > Keyboard > Custom Shortcuts), or with `gsettings`:
 
 | Shortcut         | Command                 |
 | ---------------- | ----------------------- |
-| `Super+Shift+V`  | `clip2html`             |
-| `Super+Shift+M`  | `clip2html --markdown`  |
+| `Super+Shift+V`  | `~/.local/bin/uv run --script ~/.local/bin/clip2html`             |
+| `Super+Shift+M`  | `~/.local/bin/uv run --script ~/.local/bin/clip2html --markdown`  |
 
-Use the absolute path to the symlink in the shortcut command, since GNOME does not
-read your shell `PATH`.
+Write the paths out in full (no `~`) in the shortcut command. GNOME does not read
+your shell `PATH`, so `uv` is called by absolute path too.
 
 ## Tests
 
